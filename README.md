@@ -1,2 +1,2 @@
 # Instagram
-Inspiration from Instagram clone
+An Inspiration from Instagram
