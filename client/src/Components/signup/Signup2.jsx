@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from '../../Styles/signup.module.css'
 import dateOfBirth from '../../Images/dateOfBirth.png'
 
@@ -6,8 +6,24 @@ import apple_store from '../../Images/apple_store.png'
 import google_play from '../../Images/google_play.png'
 
 const Signup2 = () => {
+const [dates, setdates] = useState({})
+
+const handleChange=(e)=>{
+  let inputName=e.target.name;
+
+  setdates({
+    ...dates,
+    [inputName]: e.target.value
+  })
+}
+
+const handleSubmit=(e)=>{
+e.preventDefault();
+console.log(dates)
+}
+
   return (
-    <div>
+    <form onSubmit={handleSubmit}>
 
     <div className={`${style.sign_main} ${style.signup}`}>
             <div className={style.date_of_birth} >
@@ -18,9 +34,9 @@ const Signup2 = () => {
       
 </div>
 <div className={style.select_div}>
-  <select name="month" id="">
+  <select name="month" id="month" onChange={handleChange}>
     <option value="January">January</option>
-    <option value="	February	">	February	</option>
+    <option value="February">February</option>
     <option value="March">March</option>
     <option value="April">April</option>
     <option value="May">May</option>
@@ -34,7 +50,7 @@ const Signup2 = () => {
   </select>
 
 
-  <select name="date" id="">
+  <select name="date" id="date" onChange={handleChange}>
     <option value="1">1</option>
     <option value="2">2</option>
     <option value="3">3</option>
@@ -67,7 +83,7 @@ const Signup2 = () => {
     <option value="30">30</option>
   </select>
 
-  <select name="year" id="">
+  <select name="year" id="year" onChange={handleChange}>
     <option value="2022">2022</option>
     <option value="2021">2021</option>
     <option value="2020">2020</option>
@@ -120,7 +136,7 @@ const Signup2 = () => {
   <br />
 Use your own date of birth, even if this account is for a business, pet or something else</p>
 
-<button className={style.login_fb + " " + style.next_btn}>Next</button>
+<button className={style.login_fb + " " + style.next_btn} type='submit'>Next</button>
 
 <h4 className={style.go_back}>Go Back</h4>
 
@@ -141,7 +157,7 @@ Use your own date of birth, even if this account is for a business, pet or somet
 </div>
 
 
-</div>
+</form>
   )
 }
 
