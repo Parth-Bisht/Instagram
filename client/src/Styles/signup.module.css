@@ -1,0 +1,145 @@
+.sign_main{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    width: 350px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.signup{
+    border: 0.4px solid rgba(0, 0, 0, 0.105);
+    
+    margin: auto;
+    margin-top: 6vh;
+    
+    /* height: 700px; */
+    margin-bottom: 3vh;
+    background-color: white;
+    padding: 0vh 0vh 8vh 0vh;
+}
+.logo{
+    margin: auto;
+    display: flex;
+    margin-top: 7.5vh;
+    
+}
+.sign_heading{
+    color: #8e8e8e;;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+    margin: 2vh 7vh 0vh 7vh;
+    /* margin: auto; */
+}
+.login_fb{
+    width: 76%;
+    background-color: #0095f6;
+    height: 30px;
+    margin: auto;
+    border-radius: 4px;
+    margin-top: 15px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.icon{
+    margin-top: 4px;
+}
+.login_fb p{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 600;
+    height: 20px;
+    margin-top: 3px;
+}
+.or{
+    margin: auto;
+    color: #8e8e8e;
+    display: flex;
+margin-top: 22px;
+width: 76%;
+
+}
+.or div:nth-child(1){
+    border: 0.4px solid rgba(0, 0, 0, 0.135);
+    height: 0;
+    width: 40%;
+}
+.or div:nth-child(3){
+    border: 0.4px solid rgba(0, 0, 0, 0.178);
+    height: 0px;
+    width: 40%;
+}
+.or div:nth-child(2){
+    margin-top: -12px;
+    margin-left: 12px;
+    margin-right: 12px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.input_box{
+    display: grid;
+   width: 75%;
+   margin: auto;
+    /* justify-content: center; */
+    gap: 20px;
+    margin-top: 20px;
+}
+.input_box input{
+    width: 95%;
+height: 40px;
+outline: none;
+padding-left: 8px;
+border: 0.5px solid rgba(0, 0, 0, 0.182);
+font-size: 13px;
+}
+.para{
+    text-align: center;
+    margin: 2vh 7vh 0vh 7vh;
+    font-size: 12px;
+color: #8e8e8e;
+}
+.para span{
+    font-weight: 600;
+}
+.signup_btn{
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px;
+    margin-top: 3px;
+    
+}
+.have_ac{
+    border: 0.4px solid rgba(0, 0, 0, 0.105);
+    width: 320px;
+    margin: auto;
+ 
+    background-color: white;
+    /* padding: 0vh 0vh 8vh 0vh; */
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+}
+.have_ac span{
+    color: #0095f6;
+}
+.have_ac+ p{
+    text-align: center;
+font-size: 15px;
+}
+.getApp{
+display: flex;
+gap: 20px;
+justify-content: center;
+}
+.getApp{
+    height: 40px;
+}
+
+
+
+
