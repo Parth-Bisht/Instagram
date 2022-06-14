@@ -12,7 +12,6 @@ const Signup = () => {
 
     const [clickInp, setclickInp] = useState(false)
 
-    const [uphead, setuphead]= useState(false)
 
     const handleChange = (e) => {
         const inputName = e.target.name;
@@ -23,11 +22,11 @@ const Signup = () => {
 
           if(e.target.value===''){
             setclickInp(false)
-          setuphead(false)
+         
         //   alert("hhh")
           }else{
               setclickInp(true)
-              setuphead(true)
+            
           }
       };
       const handleSubmit = (e) => {
@@ -122,8 +121,9 @@ const Signup = () => {
                 </div>
                 <div className={style.para}>
                     <p>People who use our service may have uploaded your
-                        contact information to Instagram. <span>Learn More</span> </p>
-                    <p>By signing up, you agree to our Terms , <span> Data Policy and Cookies Policy .
+                        contact information to Instagram. <span>Learn More</span>
+                        <br /><br />
+                    By signing up, you agree to our Terms , <span> Data Policy and Cookies Policy .
                     </span></p>
                 </div>
                 <button className={style.login_fb + " " + style.signup_btn}
