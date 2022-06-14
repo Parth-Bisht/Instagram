@@ -1,16 +1,16 @@
  
  .homemain{
     display: flex;
-    width: 70%;
-    margin: 30px auto;
+    width: 60%;
+    margin: 10px auto;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 10px;
 }
 
  .home > img {
-width: 300px;
-height: 410px;
+width: 450px;
+height: 650px;
 /* display: none; */
 /* position: absolute; */
 z-index: auto;
@@ -32,15 +32,20 @@ margin-left: -400px;
     height: 388px;
     }
 .home > div{
-    margin-top: -405px;
+    margin-top: -630px;
     /* display: none; */
     /* position:relative; */
   
-    margin-left: 75px;
+    margin-left: 168px;
     
 }
 .home{
     margin-top: -500px;
+}
+.home2{
+    width: 60%;
+    margin-top: 60px;
+    margin-left: -50px;
 }
 @media all and (max-width:381px) and (min-width:50px){
     .homemain{
@@ -48,6 +53,9 @@ margin-left: -400px;
     }
     .home{
         display: none;
+    }
+    .home2{
+        margin-left: -100px;
     }
 }
 @media all and (max-width:781px) and (min-width:380px){
@@ -60,4 +68,5 @@ margin-left: -400px;
     .homemain>div:last-child{
         margin-left: -30px;
     }
+    
 }

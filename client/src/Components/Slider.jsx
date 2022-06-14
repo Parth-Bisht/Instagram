@@ -11,8 +11,8 @@ function Slider() {
 ];
 
  const divStyle = {
-    height: "380px",
-    width: "192px",
+    height: "560px",
+    width: "245px",
     
     backgroundColor: '#f2f2f2'
   }

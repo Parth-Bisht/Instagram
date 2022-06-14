@@ -1,10 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Slider from '../Components/Slider'
 import style from "../Styles/Login.module.css"
 
 import styles from "../Styles/Home.module.css"
 import Footer from '../Components/Footer'
 const Welcome = () => {
+  const [FormData, setFormData] = useState({});
+  const [value,setValue]=useState("")
+  
+  const [types,setTypes]=useState("password")
+  const [clickInp, setclickInp] = useState(false)
+  
+  const handleChange = (e) => {
+    const inputName = e.target.name;
+      setFormData({
+        ...FormData,
+        [inputName]: e.target.value,
+      });
+
+      if(e.target.value===''){
+        setclickInp(false)
+     
+    //   alert("hhh")
+      }else{
+          setclickInp(true)
+        
+      }
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (FormData) {
+         console.log(FormData)
+ 
+    } else {
+      alert("Fill the details Correctly");
+    }
+  };
+  const rightLogoOnClick=()=>{
+    setTypes(types==="password" ? "text" : "password")
+}
+
   return (
     <div>
     <div className={styles.homemain}>
@@ -15,7 +50,7 @@ const Welcome = () => {
       <img src="https://www.instagram.com/static/images/homepage/screenshots/screenshot1.png/fdfe239b7c9f.png"/>
     </div> */}
     <div className={styles.home}>
-        <img src="https://i.pinimg.com/originals/b7/3e/62/b73e62da299075cc73f9c02dc081804a.png"/>
+        <img src="https://www.instagram.com/static/images/homepage/phones/home-phones-2x.png/cbc7174b4f05.png"/>
         
           <div>
           <Slider/>
@@ -23,18 +58,30 @@ const Welcome = () => {
        
     </div>
     </div>
-    <div>
+    <div className={style.home2}>
     <div className={style.box} style={{marginTop:"30px",width:"100%"}}>
         <img src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png" alt="instagram"/>
          <form>
-         <span class="_9nyy2">Phone number, username, or email</span>
-         <br/>
-         <input aria-label="Phone number, username, or email" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="75" name="username" type="text"/>
+        
+         <div className={style.label_float}>
+          <input type="text" name="email"
+       onChange={handleChange}
+        placeholder=' '
+           required />
+            <label>Username or Mobile Number or Email</label>
+            </div> 
             <br/>
-            <span class="_9nyy2">Password</span>
-            <br/>
-            <input aria-label="Password" aria-required="true" autocapitalize="off" autocorrect="off" name="password" type="password" />
-            <br/>
+            <div className={style.label_float}>     
+                    <input name="password" placeholder=' '
+                        onChange={handleChange}
+                        required 
+                        type={types}
+                        />
+                         <label>Password</label>
+                         </div>
+              <p onClick={rightLogoOnClick} className={style.show}
+                        style={clickInp ? {display:'block'} : {display:'none'}}>{types==="password"? "Show" : "Hide"} </p>
+                                    
             <input type="submit" disabled value="Login" />
          </form>
          <div className={style.or}>
@@ -60,6 +107,7 @@ const Welcome = () => {
   
     </div>
     </div>
+    <br/>
      <Footer/>
     </div>
 

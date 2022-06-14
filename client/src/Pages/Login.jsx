@@ -1,23 +1,66 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from '../Components/Footer'
 import style from "../Styles/Login.module.css"
 const Login = () => {
+  const [FormData, setFormData] = useState({});
   
+  const [types,setTypes]=useState("password")
+  const [clickInp, setclickInp] = useState(false)
+  
+  const handleChange = (e) => {
+    const inputName = e.target.name;
+      setFormData({
+        ...FormData,
+        [inputName]: e.target.value,
+      });
+
+      if(e.target.value===''){
+        setclickInp(false)
+     
+    //   alert("hhh")
+      }else{
+          setclickInp(true)
+        
+      }
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (FormData) {
+         console.log(FormData)
+ 
+    } else {
+      alert("Fill the details Correctly");
+    }
+  };
+  const rightLogoOnClick=()=>{
+    setTypes(types==="password" ? "text" : "password")
+}
   return (
-    <div>
-    <div className={style.box} style={{marginTop:"30px"}}>
+   
+    <div className={style.home2}>
+    <div className={style.box} style={{marginTop:"30px",width:"90%"}}>
         <img src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png" alt="instagram"/>
          <form>
-         {/* <span class="_9nyy2">Phone number, username, or email</span>
-         <br/> */}
-         <input placeholder="Phone number, username, or email" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="75" name="username" type="text"/>
+        
+         <div className={style.label_float}>
+          <input type="text" name="email"
+       onChange={handleChange}
+        placeholder=' '
+           required />
+            <label style={{left:"22px"}}>Username or Mobile Number or Email</label>
+            </div> 
             <br/>
-            <br/>
-            {/* <span class="_9nyy2">Password</span>
-            <br/> */}
-            <input placeholder="Password" aria-required="true" autocapitalize="off" autocorrect="off" name="password" type="password" />
-            <a className={style.show}>Show</a>
-            <br/>
+            <div className={style.label_float}>     
+                    <input name="password" placeholder=' '
+                        onChange={handleChange}
+                        required 
+                        type={types}
+                        />
+                         <label style={{left:"22px"}}>Password</label>
+                         </div>
+              <p onClick={rightLogoOnClick} className={style.show}
+                        style={clickInp ? {display:'block'} : {display:'none'}}>{types==="password"? "Show" : "Hide"} </p>
+                                    
             <input type="submit" disabled value="Login" />
          </form>
          <div className={style.or}>
@@ -31,7 +74,7 @@ const Login = () => {
          <br/>
          <a style={{color:"rgba(var(--fe0,0,55,107),1)",fontSize:"13px"}} href="#" >Forgot Password?</a>
     </div>
-    <div className={style.box} style={{fontSize:"13px"}}>
+    <div className={style.box} style={{fontSize:"13px",width:"90%"}}>
         <p style={{color: "rgba(var(--i1d,38,38,38),1)"}}>Don't have an account? <a style={{color:"rgba(var(--d69,0,149,246),1)"}} href="/signup">Sign up</a> </p>
     </div>
     <p style={{color: "rgba(var(--i1d,38,38,38),1)",marginBottom:"15px",fontSize:"13px"}}>Get the app</p>
@@ -40,6 +83,8 @@ const Login = () => {
         <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png" alt="playstore"/>
         <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png" alt="apple"/>
     </div>
+  
+    
     <br/>
     <Footer/>
     </div>
