@@ -1,7 +1,30 @@
-import React from 'react'
-
+import React, { useEffect,useState } from 'react'
+import axios from 'axios'
+import { Profile } from './Profile'
+import { Stories } from './Stories'
 export const SingleUser = () => {
+ const[data,setData] = useState([])
+
+
+  useEffect(()=>{
+
+   const getData= async ()=>{
+    const res =  await axios.get(`http://localhost:4000/user`)
+    const data = res.data;
+    console.log(data,"data");
+    setData(data)
+   }
+
+getData()
+
+  },[])
+
   return (
-    <div>SingleUser</div>
+   <>
+   {data.map((el)=>{
+    return[ <Profile key={el.id} {...el} />, <Stories key={el.id} {...el}/>]
+   })}
+  
+   </>
   )
 }
