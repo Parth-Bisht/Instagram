@@ -9,19 +9,19 @@
       "following_no": 574,
       "user_proj_url": "linktr.ee/therock",
       "Stories": [
-        {
+        {  "id":1,
           "plateform": "TIKTOK",
           "imgurl": "https://cdn.icon-icons.com/icons2/2201/PNG/512/tiktok_logo_icon_134006.png"
         },
-        {
+        { "id":2,
           "plateform": "TWITTER",
           "imgurl": "https://cdn.icon-icons.com/icons2/2201/PNG/512/tiktok_logo_icon_134006.png"
         },
-        {
+        { "id":3,
           "plateform": "FACEBOOK",
           "imgurl": "https://cdn.icon-icons.com/icons2/2201/PNG/512/tiktok_logo_icon_134006.png"
         },
-        {
+        {  "id":4,
           "plateform": "YOUTUBE",
           "imgurl": "https://cdn.icon-icons.com/icons2/2201/PNG/512/tiktok_logo_icon_134006.png"
         }
