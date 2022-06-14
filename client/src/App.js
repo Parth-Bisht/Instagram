@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import { SingleUser } from './Components/SingleUser';
+import { MainRoute } from './Routes/MainRoute';
 
 function App() {
   return (
     <div className="App">
-     <SingleUser/>
+    <MainRoute/>
     </div>
   );
 }

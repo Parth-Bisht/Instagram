@@ -20,15 +20,11 @@ margin:5px;
  margin:2px;
  border-radius: 50%;
 }
-
 `
 
 
 
 export const Stories = ({Stories}) => {
-
-
-
 
   return (
     <Storydiv>
