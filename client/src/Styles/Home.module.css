@@ -1,0 +1,44 @@
+ 
+ .homemain{
+    display: flex;
+    width: 70%;
+    margin: 30px auto;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+ .home > img {
+width: 300px;
+height: 410px;
+/* display: none; */
+/* position: absolute; */
+z-index: auto;
+/* margin-left: 100px; */
+margin-top: 550px;
+margin-left: 20px;
+/* z-index: -1; */
+}
+.hom > img:first-child{
+    width: 300px;
+height: 410px;
+margin-top: -800px;
+margin-left: -400px;
+}
+.hom > img:last-child{
+    margin-top: -40px;
+    margin-left: -300px;
+    width: 200px;
+    height: 388px;
+    }
+.home > div{
+    margin-top: -405px;
+    /* display: none; */
+    /* position:relative; */
+  
+    margin-left: 75px;
+    
+}
+.home{
+    margin-top: -500px;
+}
