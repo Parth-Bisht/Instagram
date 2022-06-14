@@ -2,22 +2,22 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Storydiv = styled.div`
-margin:20px;
+margin:1.25rem;
 display :grid;
-grid-template-columns:repeat(4,110px);
+grid-template-columns:repeat(4,6.875rem);
 grid-template-rows: auto;
 
 .upperborder{
-border:1px solid gray;
+border:0.0625rem solid gray;
 border-radius: 50%;
-margin:5px;
+margin:0.3125rem;
 }
 
 .imgtag{
- width:87px;
- height:87px; 
- border:1px solid gray ;
- margin:2px;
+ width:5.4375rem;
+ height:5.4375rem; 
+ border:0.0625rem solid gray ;
+ margin:0.125rem;
  border-radius: 50%;
 }
 `

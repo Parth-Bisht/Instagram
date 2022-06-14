@@ -5,18 +5,18 @@ import styled from "styled-components";
 
 const Profsty = styled.div`
   width:70%;
-  margin-top: 30px;
+  margin-top: 1.875rem;
   display: flex;
   justify-content: space-around;
 
   .imgtag {
-    width: 168px;
-    height: 168px;
+    width: 10.5rem;
+    height: 10.5rem;
     border-radius: 50%;
   }
 
   .profstruc{
-    width:400px;
+    width:25rem;
     
   }
 
@@ -35,38 +35,38 @@ const Profsty = styled.div`
 
   }
   .userdiv>div {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
   
  .buttondiv{
   display: flex;
    .msg{
     background-color: white;
-    border:1px solid gray;
-    padding:4px;
-    margin: 0 5px 0 5px;
-    border-radius:4px;
+    border:0.0625rem solid gray;
+    padding:0.25rem;
+    margin: 0 0.3125rem 0 0.3125rem;
+    border-radius:0.25rem;
    }
    .follow{
     background-color:#0095f6 ;
     color:white;
-    padding: 4px 8px 4px 8px;
-    border:1px solid gray;
-    margin: 0 5px 0 5px;
-    border-radius:4px;
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    border:0.0625rem solid gray;
+    margin: 0 0.3125rem 0 0.3125rem;
+    border-radius:0.25rem;
    }
    .threedot{
 
     background-color: white;
     border:none;
-    font-size: 24px;
+    font-size: 1.5rem;
     
    }
 
  }
  .postsno{
-   margin:10px;
-   /* border: 1px solid ; */
+   margin:0.625rem;
+   /* border: 0.0625rem solid ; */
   
    display: grid;
    grid-template-columns: repeat(3,1fr);
@@ -75,7 +75,7 @@ const Profsty = styled.div`
    }
    .postsno div{
     font-weight: bold;
-    padding:10px;
+    padding:0.625rem;
    }
    .postsno span{
     font-weight: normal;
@@ -83,8 +83,8 @@ const Profsty = styled.div`
 .founderdiv{
   display: flex;
   flex-direction: column;
-  /* border: 1px solid red; */
-  padding:20px;
+  /* border: 0.0625rem solid red; */
+  padding:1.25rem;
   text-align: left;
   line-height: 150%;
 }
@@ -92,14 +92,7 @@ const Profsty = styled.div`
 
 `
 
-export const Profile = ({
-  username,
-  posts_no,
-  followers_no,
-  following_no,
-  user_proj_url,
-  Avatar_url,
-}) => {
+export const Profile = ({  username,  posts_no,  followers_no,  following_no,  user_proj_url,  Avatar_url,}) => {
   return (
     <Profsty>
       <div className="imgdiv">

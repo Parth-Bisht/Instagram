@@ -21,12 +21,12 @@ text-align: center;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 grid-template-rows: auto;
-margin:2px;
-padding:10px;
+margin:0.125rem;
+padding:0.625rem;
 color:blue;
 }
 .linksdiv span{
- padding-inline:5px;
+ padding-inline:0.3125rem;
 } 
 `
 

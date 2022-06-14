@@ -1,23 +1,17 @@
 import React, { useEffect,useState } from 'react'
 import axios from 'axios'
+import { useDispatch, useSelector } from "react-redux";
 import { Profile } from './Profile'
 import { Stories } from './Stories'
 import { Userpost } from './Userpost'
+import { getData } from '../Redux/actions'
 export const SingleUser = () => {
- const[data,setData] = useState([])
-
+ 
+ const {data,isLoading,isError} = useSelector((state)=>state.reducer)
+ const dispatch = useDispatch()
 
   useEffect(()=>{
-
-   const getData= async ()=>{
-    const res =  await axios.get(`http://localhost:4000/user`)
-    const data = res.data;
-    console.log(data,"data");
-    setData(data)
-   }
-
-getData()
-
+    dispatch(getData())
   },[])
 
   return (
