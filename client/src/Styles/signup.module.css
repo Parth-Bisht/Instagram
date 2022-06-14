@@ -281,31 +281,19 @@ cursor: pointer;
 
 .label_float{
     position: relative;
-    /* padding-top: 4px; */
-  
+   
   }
   
   .label_float input{
-    /* border: 0; */
-    /* border-bottom: 2px solid lightgrey; */
-    outline: none;
-    /* min-width: 180px; */
+  outline: none;
     font-size: 12px;
     transition: all .3s ease-out;
     -webkit-transition: all .3s ease-out;
     -moz-transition: all .3s ease-out;
     -webkit-appearance:none;
     padding-bottom: 5px;
-    /* border-radius:0; */
   }
-  
-  /* .label_float input:focus{
-    border-bottom: 2px solid #3951b2;
-  }
-   */
-  /* .label_float input::placeholder{
-    color:transparent;
-  } */
+
   
   .label_float label{
     pointer-events: none;
@@ -321,15 +309,6 @@ cursor: pointer;
 color: #8e8e8e;
   }
   
-  /* .label_float input:required:invalid + label{
-    color: red;
-  }
-  .label_float input:focus:required:invalid{
-    border-bottom: 2px solid red;
-  } */
-  /* .label_float input:required:invalid + label:before{
-    content: '*';
-  } */
   .label_float input:focus + label,
   .label_float input:not(:placeholder-shown) + label{
     font-size: 10px;
