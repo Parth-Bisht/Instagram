@@ -1,0 +1,32 @@
+{
+    "theRock":[
+        {
+            "username":"theRock",
+            "posts_no":6619,
+            "followers_no":321,
+            "following_no":574,
+            "user_proj_url":"www.xyz.com",
+            "POSTS":[
+                {"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyspqknc0ih4t99FTvl32Rzl7MUhOPYMJY1A&usqp=CAU"},
+                {"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyspqknc0ih4t99FTvl32Rzl7MUhOPYMJY1A&usqp=CAU"},
+                {"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyspqknc0ih4t99FTvl32Rzl7MUhOPYMJY1A&usqp=CAU"},
+                {"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyspqknc0ih4t99FTvl32Rzl7MUhOPYMJY1A&usqp=CAU"},
+                {"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyspqknc0ih4t99FTvl32Rzl7MUhOPYMJY1A&usqp=CAU"},
+                {"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyspqknc0ih4t99FTvl32Rzl7MUhOPYMJY1A&usqp=CAU"},
+                {"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyspqknc0ih4t99FTvl32Rzl7MUhOPYMJY1A&usqp=CAU"},
+                {"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyspqknc0ih4t99FTvl32Rzl7MUhOPYMJY1A&usqp=CAU"},
+                {"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyspqknc0ih4t99FTvl32Rzl7MUhOPYMJY1A&usqp=CAU"},
+                {"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyspqknc0ih4t99FTvl32Rzl7MUhOPYMJY1A&usqp=CAU"},
+                {"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyspqknc0ih4t99FTvl32Rzl7MUhOPYMJY1A&usqp=CAU"},
+                {"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyspqknc0ih4t99FTvl32Rzl7MUhOPYMJY1A&usqp=CAU"},
+                {"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyspqknc0ih4t99FTvl32Rzl7MUhOPYMJY1A&usqp=CAU"},
+                {"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyspqknc0ih4t99FTvl32Rzl7MUhOPYMJY1A&usqp=CAU"}
+
+            ],
+            "REELS":[],
+            "VEDIOS":[],
+            "TAGGED":[]
+        }
+
+    ]
+}
