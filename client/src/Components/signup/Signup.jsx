@@ -12,13 +12,23 @@ const Signup = () => {
 
     const [clickInp, setclickInp] = useState(false)
 
+    const [uphead, setuphead]= useState(false)
+
     const handleChange = (e) => {
         const inputName = e.target.name;
           setFormData({
             ...FormData,
             [inputName]: e.target.value,
           });
-          setclickInp(true)
+
+          if(e.target.value===''){
+            setclickInp(false)
+          setuphead(false)
+        //   alert("hhh")
+          }else{
+              setclickInp(true)
+              setuphead(true)
+          }
       };
       const handleSubmit = (e) => {
         e.preventDefault();
@@ -61,23 +71,47 @@ const Signup = () => {
                 </div>
 
                 <div className={style.input_box}>
-                    <input type="text" name="email"
-                    onChange={handleChange}
-                        placeholder='Mobile Number or Email' required />
-                    <input type="text" name="name" placeholder='Full Name'
-                        onChange={handleChange}
-                        required/>
-                    <input type="text" name="username" placeholder='Username'
-                        onChange={handleChange}
-                        required/>
 
 
-                        <div className={style.pass_div}>
-                    <input name="password" placeholder='Password'
+                <div className={style.label_float}>
+          <input type="text" name="email"
+       onChange={handleChange}
+        placeholder=' '
+           required />
+            <label>Mobile Number or Email</label>
+            </div>    
+                  
+
+
+
+            <div className={style.label_float}>
+                    <input type="text" name="name"
+                     placeholder=' '
+                        onChange={handleChange}
+                        required/>
+                         <label>Full Name</label>
+            </div> 
+
+            <div className={style.label_float}>
+                    <input type="text" name="username" placeholder=' '
+                        onChange={handleChange}
+                        required/>
+                               <label>Username</label>
+                                </div> 
+
+
+                        {/* <div className={style.pass_div}> */}
+
+                        <div className={style.label_float}>     
+                    <input name="password" placeholder=' '
                         onChange={handleChange}
                         required 
                         type={types}
                         />
+                         <label>Password</label>
+                            {/* <p className={`${style.show_hide} ${style.pass_hide}`} 
+                            style={uphead ? {display:"block"}: {display:"none"}}
+                            >Password</p> */}
                         <p onClick={rightLogoOnClick} className={style.show_hide}
                         style={clickInp ? {display:'block'} : {display:'none'}}>{types==="password"? "Show" : "Hide"} </p>
                         </div>

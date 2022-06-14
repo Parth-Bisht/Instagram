@@ -95,13 +95,16 @@ width: 76%;
 }
 .input_box input{
     width: 95%;
-height: 37px;
+/* height: 38px; */
 outline: none;
-padding-left: 8px;
+padding-left: 9px;
 border: 0.5px solid rgba(0, 0, 0, 0.182);
-font-size: 12px;
+font-size: 14px;
 background-color: #fafafa;
 border-radius: 4px;
+
+padding-top: 20px;
+/* padding-bottom: 14px; */
 }
 ::placeholder{
     color: #8e8e8e;
@@ -109,11 +112,22 @@ border-radius: 4px;
 .pass_div{
     position: relative;
 }
+.pass_hide{
+    /* display: none; */
+    font-size: 10px !important;
+    font-weight: 400 !important;
+    position: absolute;
+    margin-top: -35px !important;
+    left: -193px;
+   
+}
+
+
 .show_hide{
     position: absolute;
-    margin-top: -32px;
+    margin-top: -28px;
     right: 9px;
-    font-size: 15px;
+    font-size: 13px;
     color: #8e8e8e;
     font-weight: 600;
 }
@@ -260,4 +274,69 @@ cursor: pointer;
 }
 
 
+
+
+
+/* float input div */
+
+.label_float{
+    position: relative;
+    /* padding-top: 4px; */
+  
+  }
+  
+  .label_float input{
+    /* border: 0; */
+    /* border-bottom: 2px solid lightgrey; */
+    outline: none;
+    /* min-width: 180px; */
+    font-size: 12px;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -webkit-appearance:none;
+    padding-bottom: 5px;
+    /* border-radius:0; */
+  }
+  
+  /* .label_float input:focus{
+    border-bottom: 2px solid #3951b2;
+  }
+   */
+  /* .label_float input::placeholder{
+    color:transparent;
+  } */
+  
+  .label_float label{
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    font-size: 13px;
+    margin-top: 12px;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    
+color: #8e8e8e;
+  }
+  
+  /* .label_float input:required:invalid + label{
+    color: red;
+  }
+  .label_float input:focus:required:invalid{
+    border-bottom: 2px solid red;
+  } */
+  /* .label_float input:required:invalid + label:before{
+    content: '*';
+  } */
+  .label_float input:focus + label,
+  .label_float input:not(:placeholder-shown) + label{
+    font-size: 10px;
+    margin-top: 0;
+    color: #00000061;
+    padding-top: 6px;
+  }
+
+  
 
