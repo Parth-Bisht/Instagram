@@ -42,3 +42,22 @@ margin-left: -400px;
 .home{
     margin-top: -500px;
 }
+@media all and (max-width:381px) and (min-width:50px){
+    .homemain{
+        width: 90%;
+    }
+    .home{
+        display: none;
+    }
+}
+@media all and (max-width:781px) and (min-width:380px){
+    .homemain{
+        width: 90%;
+    }
+    .home{
+        display: none;
+    }
+    .homemain>div:last-child{
+        margin-left: -30px;
+    }
+}

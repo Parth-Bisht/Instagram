@@ -3,8 +3,10 @@ import Slider from '../Components/Slider'
 import style from "../Styles/Login.module.css"
 
 import styles from "../Styles/Home.module.css"
+import Footer from '../Components/Footer'
 const Welcome = () => {
   return (
+    <div>
     <div className={styles.homemain}>
     <div>
 
@@ -57,6 +59,8 @@ const Welcome = () => {
     </div>
   
     </div>
+    </div>
+     <Footer/>
     </div>
 
   )
