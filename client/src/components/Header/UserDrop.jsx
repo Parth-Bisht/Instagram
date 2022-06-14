@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-// import useClickOutside from "../../hooks/useOutsideClick";
 import me from "../../assets/me.jpg";
 
 import {CgProfile} from "react-icons/cg";
@@ -10,13 +9,6 @@ import {HiSwitchHorizontal} from "react-icons/hi";
 
 const MenuDropdown = () => {
   const [isActive,setIsActive] = useState(false);
-//   const ref = useRef(null);
-
-//   const handleActiveDropdown = () => {
-//     setIsActive(!isActive);
-//     console.log(isActive)
-//   };
-//   useClickOutside(ref, setIsActive);
   return (
     <>
 
@@ -24,7 +16,6 @@ const MenuDropdown = () => {
       style={isActive?{border:"1px solid black"}:{border:"none"}}
         className="h-6 w-6 rounded-full border border-slate-200 overflow-hidden z-10"
       >
-      {/* {isActive && <div style={{border:"1px solid gray",borderRadius:"50%"}} className=" w-[28px] h-[28px] absolute z-0"></div>} */}
         <img  onClick={()=>setIsActive(!isActive)} src={me} alt=""/>
       </div>
 

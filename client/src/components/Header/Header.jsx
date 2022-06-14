@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../../assets/logo.png";
-import me from "../../assets/me.jpg";
 import { Link } from "react-router-dom";
 import { AiFillHome, AiOutlineSearch } from "react-icons/ai";
 import { RiMessengerLine } from "react-icons/ri";

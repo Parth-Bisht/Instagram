@@ -1,18 +1,15 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import useClickOutside from "../../hooks/useClickOutiside";
 import { AiOutlineHeart ,AiFillHeart} from "react-icons/ai";
 import { IoHeartCircleOutline} from "react-icons/io5";
 
 
 const ActivityDropdown = () => {
  const [isActive,setIsActive] = useState(false);
-  // const ref = useRef(null);
 
   const handleActiveDropdown = () => {
     setIsActive(!isActive);
   };
-  // useClickOutside(ref, setIsActive);
   return (
     <>
       <Link to="/" onClick={handleActiveDropdown} className="relative" >
@@ -24,7 +21,6 @@ const ActivityDropdown = () => {
       </Link>
 
       <div
-      // ref={ref}
         className={isActive ? "visible absolute top-[50px] right-[0px] lg:right-[200px] rounded-md shadow-md" : "hidden"}
       >
         <div className="w-[500px] h-[250px] ">
