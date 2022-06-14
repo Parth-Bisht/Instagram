@@ -37,7 +37,7 @@ const Signup = () => {
                     <div className={style.icon}>
                         <FaFacebookSquare />
                     </div>
-                    <p>Log in with Facebook</p>
+                    <a href='http://www.facebook.com/'>Log in with Facebook</a>
                 </div>
 
                 <div className={style.or}>
@@ -80,8 +80,8 @@ const Signup = () => {
 
             <p>Get the app.</p>
             <div className={style.getApp}>
-                <img src={apple_store} alt="" />
-                <img src={google_play} alt="" />
+                <img src={apple_store} alt="apple store" />
+                <img src={google_play} alt="google play" />
             </div>
 
 
