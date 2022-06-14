@@ -8,6 +8,9 @@ import { FaFacebookSquare } from 'react-icons/fa';
 
 const Signup = () => {
     const [FormData, setFormData] = useState({});
+    const [types, setTypes]= useState("password")
+
+    const [clickInp, setclickInp] = useState(false)
 
     const handleChange = (e) => {
         const inputName = e.target.name;
@@ -15,7 +18,7 @@ const Signup = () => {
             ...FormData,
             [inputName]: e.target.value,
           });
-
+          setclickInp(true)
       };
       const handleSubmit = (e) => {
         e.preventDefault();
@@ -26,6 +29,17 @@ const Signup = () => {
           alert("Fill the details Correctly");
         }
       };
+
+
+
+
+  const rightLogoOnClick=()=>{
+            setTypes(types==="password" ? "text" : "password")
+  }
+
+
+
+
 
     return (
         <div className={style.sign_main}>
@@ -56,12 +70,21 @@ const Signup = () => {
                     <input type="text" name="username" placeholder='Username'
                         onChange={handleChange}
                         required/>
-                    <input type="password" name="password" placeholder='Password'
+
+
+                        <div className={style.pass_div}>
+                    <input name="password" placeholder='Password'
                         onChange={handleChange}
                         required 
-                        aria-required="true"
-                        
+                        type={types}
                         />
+                        <p onClick={rightLogoOnClick} className={style.show_hide}
+                        style={clickInp ? {display:'block'} : {display:'none'}}>{types==="password"? "Show" : "Hide"} </p>
+                        </div>
+
+
+
+
                 </div>
                 <div className={style.para}>
                     <p>People who use our service may have uploaded your

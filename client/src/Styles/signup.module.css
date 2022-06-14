@@ -106,6 +106,17 @@ border-radius: 4px;
 ::placeholder{
     color: #8e8e8e;
 }
+.pass_div{
+    position: relative;
+}
+.show_hide{
+    position: absolute;
+    margin-top: -32px;
+    right: 9px;
+    font-size: 15px;
+    color: #8e8e8e;
+    font-weight: 600;
+}
 .para{
     text-align: center;
     /* margin: 2vh 7vh 0vh 7vh; */
@@ -167,6 +178,9 @@ margin-bottom: 30px
     margin-bottom: -0px;
     font-size: 15px;
 }
+.date_of_birth h4{
+    color: #000000be;
+}
 .why_need{
 color: #0095f6;
 cursor: pointer;
@@ -205,3 +219,45 @@ margin-top: 16px;
 margin-bottom: -16px;
 cursor: pointer;
 }
+
+
+/* OTP Page */
+.otp_input{
+    padding: 9px;
+    outline: none;
+    border: 0.5px solid rgba(0, 0, 0, 0.218);
+    border-radius: 3px;
+    width: 70%;
+    margin-top:15px;
+}
+
+.img_date{
+    margin-top: 8px;
+    height: 85px;
+}
+.confirm{
+    margin-top: 30px;
+}
+.change_req{
+    display: flex;
+    width: 75%;
+    margin: auto;
+    margin-top: 20px;
+}
+.change_req span{
+    color: #0095f6;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.change_req span:active{
+    color: #007bce9e;
+}
+.change_req hr{
+    height: 8px;
+    color: black;
+    border: 1px solid black;
+}
+
+
+

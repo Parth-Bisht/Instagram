@@ -30,4 +30,8 @@ color: #8e8e8e;
 cursor: pointer;
 }
 
-
+@media only screen and (max-width: 600px) {
+    .footer_main{
+        width: 80%;
+    }
+  }
