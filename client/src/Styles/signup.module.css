@@ -43,6 +43,10 @@
     display: flex;
     justify-content: center;
     gap: 10px;
+    cursor: pointer;
+}
+.login_fb:active{
+    background-color: #017fd3f3;
 }
 .icon{
     margin-top: 4px;
@@ -89,11 +93,13 @@ width: 76%;
 }
 .input_box input{
     width: 95%;
-height: 40px;
+height: 37px;
 outline: none;
 padding-left: 8px;
 border: 0.5px solid rgba(0, 0, 0, 0.182);
-font-size: 13px;
+font-size: 12px;
+background-color: #fafafa;
+border-radius: 4px;
 }
 .para{
     text-align: center;
@@ -126,6 +132,7 @@ color: #8e8e8e;
 }
 .have_ac span{
     color: #0095f6;
+    cursor: pointer;
 }
 .have_ac+ p{
     text-align: center;

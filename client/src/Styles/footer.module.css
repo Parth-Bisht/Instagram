@@ -1,0 +1,25 @@
+.footer_main{
+    width: 900px;
+    height: 70px;
+    margin: auto;
+    margin-bottom: 30px;
+   
+}
+.footer_flex{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 12px;
+    color: #8e8e8e;
+}
+.language{
+outline: none;
+border: none;
+height: 40px;
+font-size: 12px;
+background-color: #8e8e8e00;
+width: 90px;
+color: #8e8e8e;
+}
+
+
