@@ -23,13 +23,15 @@
     
 }
 .sign_heading{
-    color: #8e8e8e;;
+    color: #8e8e8eea;;
     text-align: center;
     font-size: 17px;
     font-weight: 600;
     display: flex;
-    margin: 2vh 7vh 0vh 7vh;
-    /* margin: auto; */
+    /* margin: 2vh 7vh 0vh 7vh; */
+    margin: auto;
+width: 80%;
+margin-top: 8px;
 }
 .login_fb{
     width: 76%;
@@ -100,6 +102,9 @@ border: 0.5px solid rgba(0, 0, 0, 0.182);
 font-size: 12px;
 background-color: #fafafa;
 border-radius: 4px;
+}
+::placeholder{
+    color: #8e8e8e;
 }
 .para{
     text-align: center;

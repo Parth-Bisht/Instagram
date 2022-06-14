@@ -58,7 +58,10 @@ const Signup = () => {
                         required/>
                     <input type="password" name="password" placeholder='Password'
                         onChange={handleChange}
-                        required/>
+                        required 
+                        aria-required="true"
+                        
+                        />
                 </div>
                 <div className={style.para}>
                     <p>People who use our service may have uploaded your

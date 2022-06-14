@@ -6,7 +6,7 @@ const Footer = () => {
     <div className={style.footer_main}>
         <div className={style.footer_flex}>
 
-        <p>Meta </p>
+        <p href="https://www.instagram.com/directory/profiles/">Meta </p>
         <p>About</p>
         <p>Blog</p>
         <p>Jobs</p>
@@ -23,10 +23,11 @@ const Footer = () => {
         <div className={style.footer_flex}>
 <select name="langyage" className={style.language}>
 <option value="English">English (UK) </option>
-<option value="English">English (India) </option>
-<option value="English">Hindi (India) </option>
-<option value="English">Benhali (India) </option>
-<option value="English">Malayalam </option>
+<option value="Hindi">Hindi </option>
+<option value="Bengali">Bengali </option>
+<option value="Malayalam">Malayalam </option>
+<option value="Marathi">Marathi </option>
+<option value="Nepali">Nepali </option>
 </select>
           <p>© 2022 Instagram from Meta</p>
         </div>
