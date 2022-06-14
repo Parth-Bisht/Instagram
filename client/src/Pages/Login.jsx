@@ -2,18 +2,21 @@ import React from 'react'
 import Footer from '../Components/Footer'
 import style from "../Styles/Login.module.css"
 const Login = () => {
+  
   return (
     <div>
     <div className={style.box} style={{marginTop:"30px"}}>
         <img src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png" alt="instagram"/>
          <form>
-         <span class="_9nyy2">Phone number, username, or email</span>
-         <br/>
-         <input aria-label="Phone number, username, or email" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="75" name="username" type="text"/>
+         {/* <span class="_9nyy2">Phone number, username, or email</span>
+         <br/> */}
+         <input placeholder="Phone number, username, or email" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="75" name="username" type="text"/>
             <br/>
-            <span class="_9nyy2">Password</span>
             <br/>
-            <input aria-label="Password" aria-required="true" autocapitalize="off" autocorrect="off" name="password" type="password" />
+            {/* <span class="_9nyy2">Password</span>
+            <br/> */}
+            <input placeholder="Password" aria-required="true" autocapitalize="off" autocorrect="off" name="password" type="password" />
+            <a className={style.show}>Show</a>
             <br/>
             <input type="submit" disabled value="Login" />
          </form>
