@@ -22,9 +22,14 @@ getData()
   return (
    <>
    {data.map((el)=>{
-    return[ <Profile key={el.id} {...el} />, <Stories key={el.id} {...el}/>]
+    return <Profile key={el.id} {...el} />
    })}
-  
+   
+   {data.map((el)=>{
+    return <Stories key={el.id} {...el} />
+   })}
+    
+
    </>
   )
 }
