@@ -2,6 +2,7 @@ import React, { useEffect,useState } from 'react'
 import axios from 'axios'
 import { Profile } from './Profile'
 import { Stories } from './Stories'
+import { Userpost } from './Userpost'
 export const SingleUser = () => {
  const[data,setData] = useState([])
 
@@ -27,7 +28,7 @@ getData()
    {data.map((el)=>{
     return  <Stories key={el.id} {...el} />
    })}
-    
+    <Userpost/>
 
    </>
   )
