@@ -1,12 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import otp from '../../Images/otp.png';
-
 import apple_store from '../../Images/apple_store.png'
 import google_play from '../../Images/google_play.png'
 import style from '../../Styles/signup.module.css'
 const Otp = () => {
+const [otps, setOtps]=useState('')
+const [disable, setDisable]=useState(true)
+
+  const handleChange=(e)=>{
+    setOtps(
+       e.target.value,
+       setDisable(false)
+    )
+    if(e.target.value.length===7){ 
+alert("OTP length should be 6 digit")
+    }
+   
+  }
+
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+    console.log(otps);
+  }
+
+  
+
   return (
-    <div>
+    <form onSubmit={handleSubmit}>
          
 
 <div className={`${style.sign_main} ${style.signup}`}>
@@ -20,10 +40,15 @@ const Otp = () => {
 </span>
   
   </div>
-  <input type="number" name="otp" placeholder='######'required 
-  className={style.otp_input}/>
+  <input type="number" name="otp"
+   placeholder='######'required 
+   onChange={handleChange}
+  className={style.otp_input} value={otps} maxLength="6"/>
 
-  <button className={style.login_fb + " " + style.signup_btn + " " + style.confirm}>Confirm</button>
+  <button className={style.login_fb + " " + style.signup_btn + " " + style.confirm}
+  type='submit' 
+  disabled={disable} 
+  >Confirm</button>
  
   <div className={style.change_req}>
 <span>Change Number</span>
@@ -46,7 +71,7 @@ const Otp = () => {
             </div>
 
 
-    </div>
+    </form>
   )
 }
 
