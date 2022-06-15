@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import suggestions from '../../assets/Data/Suggestion.json';
+import axios from 'axios';
 
 const Suggestions = () => {
+  
+  useEffect(()=>{
+    axios.get("http://localhost:8080/user").then(({data})=>console.log(data));
+  },[])
   return (
     <div className="ml-7 mt-10">
     <div className="flex items-center justify-between">
