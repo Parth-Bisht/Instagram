@@ -1,3 +1,9 @@
+.home{
+  width: 20%;
+  margin: 60px auto;
+  /* margin-left: -50px; */
+  /* border: 1px solid black; */
+}
 .box,
 .box1 {
   align-items: center;
@@ -203,11 +209,23 @@ color: #8e8e8e;
   .box,.box1 {
     width: 100%;
   }
+  .home{
+    width: 90%;
+ }
+ .label{
+   /* left:-12px; */
+   /* text-align:left ; */
+   /* display: none; */
+   margin-left:-40px;
+ }
 
 }
 @media all and (max-width: 781px) and (min-width: 380px) {
   .box {
-    width: 50%;
+    width: 90%;
   }
-  
+  .home{
+     width: 70%;
+  }
+ 
 }

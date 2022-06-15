@@ -41,7 +41,7 @@ const Welcome = () => {
         
       }
       if(inputName==="password"){
-        if(e.target.value!==""){
+        if(e.target.value.length>=8){
           setPass(true)
         }
         // console.log(pass)
