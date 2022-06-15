@@ -1,6 +1,6 @@
 // use axios for api call
 import axios from "axios";
-import { FAILURE, REQUEST, SEARCH, SUCCESS } from "./actionTypes";
+import { FAILURE, REQUEST, SEARCH, SUCCESS ,POSTS,REELS,VIDEOS,TAGGED} from "./actionTypes";
 
 
 
@@ -8,6 +8,11 @@ import { FAILURE, REQUEST, SEARCH, SUCCESS } from "./actionTypes";
 export const getRequest = () => ({ type: REQUEST });
 export const getSuccess = (payload) => ({ type: SUCCESS, payload });
 export const getFailure = () => ({ type: FAILURE });
+export const getPosts = (payload)=>({type:POSTS,payload})
+export const getReels = (payload)=>({type:REELS,payload})
+export const getVideos = (payload)=>({type:VIDEOS,payload})
+export const getTagged = (payload)=>({type:TAGGED,payload})
+
 
 export const getData = () => async (dispatch) => {
   dispatch(getRequest());

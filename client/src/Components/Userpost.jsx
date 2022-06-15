@@ -27,7 +27,18 @@ color:blue;
 }
 .linksdiv span{
  padding-inline:0.3125rem;
-} 
+}
+@media (max-width: 520px){
+
+
+}
+@media (max-width: 798px) {
+.linksdiv span{
+display: none;
+};
+
+}
+
 `
 
 
@@ -39,7 +50,7 @@ export const Userpost = () => {
          <div className='linksdiv'>
          <NavLink  to="/"><BsFillGrid3X3GapFill/><span>POSTS</span></NavLink>
          <NavLink  to="/reels"><MdOutlineVideoLibrary/><span>REELS</span></NavLink>
-         <NavLink  to="/videos" ><i class="fa-solid fa-circle-play"></i> <span>VIDEOS</span></NavLink>
+         <NavLink  to="/videos" ><i className="fa-solid fa-circle-play"></i> <span>VIDEOS</span></NavLink>
          <NavLink  to="/tagged" ><MdOutlinePermContactCalendar/><span>TAGGED</span></NavLink>
          </div>
         </NavStyle>

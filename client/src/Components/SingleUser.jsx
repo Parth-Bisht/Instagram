@@ -12,7 +12,7 @@ export const SingleUser = () => {
 
   useEffect(()=>{
     dispatch(getData())
-  },[])
+  },[dispatch])
 
   return (
    <>

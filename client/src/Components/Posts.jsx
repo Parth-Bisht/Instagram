@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getPosts } from "../Redux/actions";
 
 export const Posts = () => {
-  const [data, setData] = useState([]);
+const dispatch= useDispatch()
 
-  useEffect(() => {
-    const getData = () => {};
+const {data,filterData} = useSelector((state)=>state.reducer)
+console.log(data,"dataposts",filterData,'filterdata')
+useEffect(()=>{
 
-    getData();
-  }, []);
+dispatch(getPosts(data))
 
-  return <div>Post</div>;
+},[dispatch])
+
+
+  return (<div>Post</div>);
 };

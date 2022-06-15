@@ -1,6 +1,10 @@
 export const REQUEST = 'REQUEST'
 export const SUCCESS = 'SUCCESS'
 export const FAILURE = 'FAILURE'
+export const POSTS = 'POSTS'
+export const REELS = 'REELS'
+export const VIDEOS = 'VIDEOS'
+export const TAGGED = 'TAGGED'
 
 
 

@@ -1,4 +1,4 @@
-import { FAILURE, REQUEST, SUCCESS,ASC,DESC, SEARCH } from "./actionTypes";
+import { FAILURE, REQUEST, SUCCESS,ASC,DESC, SEARCH,POSTS,REELS,VIDEOS,TAGGED} from "./actionTypes";
 import {  GET_INDEX_DATA,  GET_CATS_DATA,  GET_BESTSELLER_DATA,  GET_LATEST_DATA,  GET_MAKEUP_DATA,  GET_MOSTVIEWED_DATA,  GET_CATPRODUCTS_DATA,} from "./actionTypes";
 
 
@@ -6,7 +6,7 @@ const initState = {
   data: [],
   isLoading: false,
   isError: false,
-  // filterData: [],
+  filterData:[]
   // products: [],
   // newArrivals: [],
   // bestSeller: [],
@@ -16,7 +16,8 @@ const initState = {
   // catProducts: [],
 };
 
-const reducer = (state = initState, { type, payload,value }) => {
+const reducer = (state = initState, { type, payload }) => {
+
   switch (type) {
     case REQUEST:
       return {
@@ -33,6 +34,7 @@ const reducer = (state = initState, { type, payload,value }) => {
         isError: false,
         products: [],
         data: payload,
+        filterData:[...payload.map((el)=>(el.POSTS))]
       };
     case FAILURE:
       return {
@@ -41,6 +43,42 @@ const reducer = (state = initState, { type, payload,value }) => {
         isError: true,
         products: [],
         data: [],
+      };
+      case POSTS:
+           return {
+        ...state,
+        isLoading: false,
+        isError: false,
+        products: [],
+        data: payload,
+        filterData:[...payload.map((el)=>(el.POSTS))]
+      };
+      case REELS:
+      return {
+        ...state,
+        isLoading: false,
+        isError: false,
+        products: [],
+        data: [],
+        filterData:[...payload.map((el)=>(el.REELS))]
+      };
+      case VIDEOS:
+      return {
+        ...state,
+        isLoading: false,
+        isError: false,
+        products: [],
+        data: [],
+        filterData:[...payload.map((el)=>(el.VIDEOS))]
+      };
+      case TAGGED:
+      return {
+        ...state,
+        isLoading: false,
+        isError: false,
+        products: [],
+        data: [],
+        filterData:[...payload.map((el)=>(el.TAGGED))]
       };
     default:
       return state;
