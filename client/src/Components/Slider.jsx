@@ -25,6 +25,7 @@ function Slider() {
         {urls.map((url, index) => (
          
             <img
+            key={index}
               src={url}
               style={{ width: "100%", height: "auto" }}
               alt="asdada"

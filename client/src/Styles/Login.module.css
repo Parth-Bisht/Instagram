@@ -94,7 +94,9 @@ form > input:last-child {
   color: #fff;
   border: none;
 }
-
+form > input:last-child:enabled{
+  background-color: blue;
+}
 .label_float{
     position: relative;
    

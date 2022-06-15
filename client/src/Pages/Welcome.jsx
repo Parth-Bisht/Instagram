@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Slider from '../Components/Slider'
 import style from "../Styles/Login.module.css"
 
@@ -6,11 +6,24 @@ import styles from "../Styles/Home.module.css"
 import Footer from '../Components/Footer'
 const Welcome = () => {
   const [FormData, setFormData] = useState({});
-  const [value,setValue]=useState("")
-  
+  const [btn,setBtn]=useState(true)
   const [types,setTypes]=useState("password")
   const [clickInp, setclickInp] = useState(false)
-  
+  const [pass,setPass]=useState(false)
+  function handleBtn(){
+      
+        if(clickInp && pass){
+          setBtn(false)
+        }
+        else{
+          setBtn(true)
+        }
+        // console.log(pass)
+
+  }
+  useEffect(()=>{
+    handleBtn()
+  },[clickInp,pass])
   const handleChange = (e) => {
     const inputName = e.target.name;
       setFormData({
@@ -18,6 +31,7 @@ const Welcome = () => {
         [inputName]: e.target.value,
       });
 
+      
       if(e.target.value===''){
         setclickInp(false)
      
@@ -25,6 +39,12 @@ const Welcome = () => {
       }else{
           setclickInp(true)
         
+      }
+      if(inputName==="password"){
+        if(e.target.value!==""){
+          setPass(true)
+        }
+        // console.log(pass)
       }
   };
   const handleSubmit = (e) => {
@@ -61,7 +81,7 @@ const Welcome = () => {
     <div className={style.home2}>
     <div className={style.box} style={{marginTop:"30px",width:"100%"}}>
         <img src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png" alt="instagram"/>
-         <form>
+         <form onSubmit={handleSubmit}>
         
          <div className={style.label_float}>
           <input type="text" name="email"
@@ -82,7 +102,7 @@ const Welcome = () => {
               <p onClick={rightLogoOnClick} className={style.show}
                         style={clickInp ? {display:'block'} : {display:'none'}}>{types==="password"? "Show" : "Hide"} </p>
                                     
-            <input type="submit" disabled value="Login" />
+            <input type="submit" disabled={btn} value="Login" />
          </form>
          <div className={style.or}>
            <div ></div>
