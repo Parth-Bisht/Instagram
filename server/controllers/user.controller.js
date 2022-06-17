@@ -1,4 +1,5 @@
 const express = require('express');
+const validator = require('validator')
 
 const User =require('../models/user.model');
 const router =express.Router();
@@ -20,6 +21,34 @@ router.get("/:id",async function(req, res){
         return res.status(500).send({err});
     }
 })
+
+const signupAuthentication= async (req,res,next)=>{
+    // console.log(req.body,"request")
+    const {email,password,user_name} = req.body
+
+    try{
+        const finduser = await User.find({user_name})
+        if(finduser.length!=0){
+            return res.status(200).send({message:`User with this user_name ${user_name} already exists.Please provide some different username`})
+        }
+
+    }catch(err){
+        return res.status(500).send({message:err.message})
+    }
+   
+
+ if(validator.isEmail(email) && validator.isStrongPassword(password)){
+   next()
+ }
+ else if(!validator.isEmail(email)){
+    return res.status(200).send({message:"Please provide a valid Email"})
+ }
+ else if(!validator.isStrongPassword(password))
+    return res.status(200).send({message:"Please provide a Strong Password",data:{ minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1,}})
+ }
+    
+
+router.post('/',signupAuthentication)
 router.post("/",async function(req, res){
     try{
 const user =await User.create(req.body);
