@@ -24,6 +24,7 @@ router.get("/:id",async function(req, res){
 
 const signupAuthentication= async (req,res,next)=>{
     // console.log(req.body,"request")
+    otpVerfication()
     const {email,password,user_name} = req.body
 
     try{
@@ -47,6 +48,14 @@ const signupAuthentication= async (req,res,next)=>{
     return res.status(200).send({message:"Please provide a Strong Password",data:{ minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1,}})
  }
     
+
+const otpVerfication=()=>{
+
+}
+
+
+
+
 
 router.post('/',signupAuthentication)
 router.post("/",async function(req, res){
